@@ -2,6 +2,7 @@ package com.ecommerce.project.controllers;
 
 import com.ecommerce.project.models.Category;
 import com.ecommerce.project.services.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 public class CategoryController {
 
+    @Autowired
     private CategoryService categoryService;
 
     public CategoryController(CategoryService categoryService) {
