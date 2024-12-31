@@ -20,12 +20,12 @@ public class CategoryController {
 
     @GetMapping("/api/public/categories")
     public List<Category> getAllCategories () {
-        return categoryService.getAllCategories();
+        return this.categoryService.getAllCategories();
     }
 
     @PostMapping("/api/public/categories")
     public String createCategory(@RequestBody Category category) {
-        categoryService.createCategory(category);
+        this.categoryService.createCategory(category);
         return "Category added successfully!";
     }
 }
