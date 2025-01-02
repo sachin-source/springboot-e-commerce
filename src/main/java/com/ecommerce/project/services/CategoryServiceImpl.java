@@ -22,4 +22,9 @@ public class CategoryServiceImpl implements CategoryService{
         category.setCategoryId(nextId++);
         categories.add(category);
     }
+
+    @Override
+    public String deleteCategory(Long categoryId){
+        return "Deleted category successfully";
+    }
 }
